@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ComicVerse Hub — Browse</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body data-page="browse">
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="inner container">
+      <div class="brand">
+        <div class="logo">ComicVerse <span class="accent">Hub</span></div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="browse.html" class="active">Browse</a>
+        <button id="open-cart-btn-2" class="icon-btn">
+          Cart <span id="cart-count-2" class="cart-badge">0</span>
+        </button>
+        <button id="theme-toggle-2" class="icon-btn">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <h1 class="page-title">Browse Comics</h1>
+
+    <!-- FILTERS -->
+    <section class="browse-filters card glass">
+      <div class="filter-row">
+
+        <div class="filter-group">
+          <label>Publisher</label>
+          <select id="filter-publisher">
+            <option value="">All Publishers</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Genre</label>
+          <select id="filter-genre">
+            <option value="">All Genres</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Sort</label>
+          <select id="sort-by">
+            <option value="date">Newest</option>
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+            <option value="title">Title A-Z</option>
+          </select>
+        </div>
+
+        <div class="filter-search">
+          <input id="search" placeholder="Search comics..." />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMICS GRID -->
+    <section class="section">
+      <div id="comics-list" class="grid-cards"></div>
+    </section>
+
+  </main>
+
+  <!-- SLIDE CART -->
+  <aside id="slide-cart" class="slide-cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="icon-btn">✕</button>
+    </div>
+    <div class="cart-body" id="slide-cart-body"></div>
+    <div class="cart-footer">
+      <div class="muted">Total: <strong id="slide-cart-total">₹0.00</strong></div>
+      <div class="row">
+        <a href="cart.html" class="button-outline">Open Cart</a>
+        <button id="slide-checkout" class="button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">© ComicVerse Hub — Portfolio demo</div>
+  </footer>
+
+  <script src="comics.js"></script>
+  <script src="script.js"></script>
+  <div id="cursor"></div>
+
+</body>
+</html>
