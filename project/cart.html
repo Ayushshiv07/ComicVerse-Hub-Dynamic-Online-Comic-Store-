@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ComicVerse Hub — Cart</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body data-page="cart">
+
+<header class="nav">
+  <div class="inner container">
+    <div class="logo">ComicVerse <span class="accent">Hub</span></div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <button id="open-cart-btn-4" class="icon-btn">Cart <span id="cart-count-4" class="cart-badge">0</span></button>
+      <button id="theme-toggle-4" class="icon-btn">🌗</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h1 class="page-title">Your Cart</h1>
+
+  <section class="cart-wrapper card glass">
+
+    <div id="cart-empty" class="empty-box hidden">
+      <img src="https://cdn-icons-png.flaticon.com/512/5305/5305282.png" width="130" />
+      <h2>Your cart is empty</h2>
+      <p class="muted">Browse comics and add items to your cart.</p>
+      <a href="browse.html" class="button">Browse Comics</a>
+    </div>
+
+    <table id="cart-table" class="cart-table">
+      <thead>
+        <tr>
+          <th>Comic</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody id="cart-body"></tbody>
+    </table>
+
+    <div id="cart-footer" class="cart-total-bar">
+      <span class="total-label">Total:</span>
+      <span class="total-value" id="cart-total">₹0.00</span>
+      <button id="checkout" class="button big">Checkout</button>
+    </div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© ComicVerse Hub — Portfolio Demo</div>
+</footer>
+
+<script src="comics.js"></script>
+<script src="script.js"></script>
+
+<div id="cursor"></div>
+</body>
+</html>

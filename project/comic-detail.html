@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ComicVerse Hub — Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="detail">
+  <header class="nav">
+    <div class="inner container">
+      <div class="brand">
+        <div class="logo">ComicVerse <span class="accent">Hub</span></div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <button id="open-cart-btn-3" aria-label="Open cart" class="icon-btn">Cart <span id="cart-count-3" class="cart-badge">0</span></button>
+        <button id="theme-toggle-3" aria-label="Toggle theme" class="icon-btn">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="detail" class="detail-wrap card glass">
+      <div class="detail-cover">
+        <img id="comic-cover" src="" alt="cover" />
+      </div>
+
+      <div class="detail-meta">
+        <h1 id="comic-title"></h1>
+        <div id="comic-creators" class="muted"></div>
+        <div id="comic-price" class="price"></div>
+        <p id="comic-synopsis"></p>
+
+        <div class="row" style="margin-top:1rem;">
+          <button id="add-to-cart" class="button">Add to Cart</button>
+          <a id="buy-now" class="button-outline" href="#">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- sticky add bar (for small screens) -->
+  <div id="sticky-add" class="sticky-add" aria-hidden="true">
+    <div class="muted" id="sticky-title"></div>
+    <div><strong id="sticky-price"></strong></div>
+    <div><button id="sticky-add-btn" class="button">Add to Cart</button></div>
+  </div>
+
+  <aside id="slide-cart" class="slide-cart" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="icon-btn">✕</button>
+    </div>
+    <div class="cart-body" id="slide-cart-body"></div>
+    <div class="cart-footer">
+      <div class="muted">Total: <strong id="slide-cart-total">₹0.00</strong></div>
+      <div class="row">
+        <a href="cart.html" class="button-outline">Open Cart</a>
+        <button id="slide-checkout" class="button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container">© ComicVerse Hub — Portfolio demo</div>
+  </footer>
+
+  <script src="comics.js"></script>
+  <script src="script.js"></script>
+  <div id="cursor"></div>
+
+</body>
+</html>
