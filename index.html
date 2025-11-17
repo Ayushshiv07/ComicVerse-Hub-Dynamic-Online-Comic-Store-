@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComicVerse Hub — Home</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body data-page="home">
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="inner container">
+      <div class="brand">
+        <div class="logo">ComicVerse <span class="accent">Hub</span></div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="browse.html">Browse</a>
+
+        <button id="open-cart-btn" class="icon-btn">
+          Cart <span id="cart-count" class="cart-badge">0</span>
+        </button>
+
+        <a class="cta" href="browse.html">Shop Now</a>
+
+        <button id="theme-toggle" class="icon-btn">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero grid">
+
+      <!-- LEFT SIDE (CAROUSEL) -->
+      <div class="hero-left card glass">
+
+        <div class="hero-carousel" id="hero-carousel">
+
+          <!-- SLIDE 1 -->
+          <div class="slide" data-id="001" style="--show:1;">
+            <img src="assets/comic-001.jpg" alt="Nightfall: Eclipse" />
+            <div class="slide-meta">
+              <h1>Nightfall: Eclipse</h1>
+              <p class="muted">Shadow Knight and Luna race to save the city.</p>
+
+              <div class="row">
+                <a class="button-outline" href="comic-detail.html?id=001">Learn more</a>
+                <button class="button" data-add="001">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="slide" data-id="002" style="--show:0;">
+            <img src="assets/comic-002.jpg" alt="Steel & Strings" />
+            <div class="slide-meta">
+              <h1>Steel & Strings</h1>
+              <p class="muted">A futuristic noir story about sound and machines.</p>
+
+              <div class="row">
+                <a class="button-outline" href="comic-detail.html?id=002">Learn more</a>
+                <button class="button" data-add="002">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="slide" data-id="003" style="--show:0;">
+            <img src="assets/comic-003.jpg" alt="Gotham After Dark" />
+            <div class="slide-meta">
+              <h1>Gotham After Dark</h1>
+              <p class="muted">Detective Vigil uncovers a city full of shadows.</p>
+
+              <div class="row">
+                <a class="button-outline" href="comic-detail.html?id=003">Learn more</a>
+                <button class="button" data-add="003">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DOTS -->
+        <div class="carousel-dots" id="carousel-dots"></div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <aside class="hero-right">
+
+        <div class="card glass small-list">
+          <h3>New Releases</h3>
+          <div class="release-list" id="home-releases"></div>
+        </div>
+
+        <div class="card glass small-list">
+          <h3>Popular Series</h3>
+          <div class="release-list">
+            <div class="pill">Nightfall</div>
+            <div class="pill">Gotham</div>
+            <div class="pill">Steel & Strings</div>
+          </div>
+        </div>
+
+      </aside>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section">
+      <h2>Featured</h2>
+      <div id="featured-grid" class="grid-cards"></div>
+    </section>
+
+  </main>
+
+  <!-- SLIDE-OUT CART -->
+  <aside id="slide-cart" class="slide-cart" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="icon-btn">✕</button>
+    </div>
+
+    <div class="cart-body" id="slide-cart-body"></div>
+
+    <div class="cart-footer">
+      <div class="muted">Total: <strong id="slide-cart-total">₹0.00</strong></div>
+
+      <div class="row">
+        <a href="cart.html" class="button-outline">Open Cart</a>
+        <button id="slide-checkout" class="button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">© ComicVerse Hub — Portfolio demo</div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="comics.js"></script>
+  <script src="script.js"></script>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+
+</body>
+</html>
